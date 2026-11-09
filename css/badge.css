@@ -1,0 +1,5 @@
+@font-face{font-family:'ProjektBlackbirdIS';src:url('../assets/fonts/ProjektBlackbirdIS.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+.sndr-badge{display:inline-flex;align-items:center;gap:0.5rem;min-height:44px;text-decoration:none}
+.sndr-badge-mark{font-family:'ProjektBlackbirdIS',sans-serif;color:var(--sndr-ink);font-size:15px;letter-spacing:0.02em}
+.sndr-badge-star{color:var(--sndr-ember)}
+.sndr-badge-studio{font-family:'Geist Mono',ui-monospace,'SF Mono',Menlo,monospace;color:var(--sndr-ink);font-size:10.5px;letter-spacing:0.1em;opacity:0.85}
