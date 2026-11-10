@@ -79,7 +79,7 @@ main{background:var(--paper)}
 #water{position:absolute;inset:0;width:100%;height:100%;opacity:0}
 .gl #water{opacity:1}
 .stage-ui{position:absolute;left:0;right:0;top:0;height:100svh}
-.wm{position:absolute;left:0;right:0;bottom:20%;text-align:center;font:400 min(13.3vw,30svh)/.8 var(--f);letter-spacing:-.025em;text-transform:uppercase}
+.wm{position:absolute;left:0;right:0;bottom:20%;text-align:center;text-shadow:0 2px 28px rgba(14,21,26,.45);font:400 min(13.3vw,30svh)/.8 var(--f);letter-spacing:-.025em;text-transform:uppercase}
 @media (max-aspect-ratio:9/10){.wm{font-size:min(18.1vw,30svh)}}
 .gl .wm{clip-path:inset(50%);white-space:nowrap}
 .foot{position:absolute;left:var(--pad);right:var(--pad);bottom:max(30px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:24px}
