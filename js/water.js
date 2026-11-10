@@ -67,12 +67,13 @@
     function drawText() {
       var c = document.createElement('canvas'); c.width = W; c.height = H;
       var x = c.getContext('2d'), word = Array.from(opts.word || 'KRÁKHAMAR');
-      var target = W * (W / H < 0.9 ? 0.9 : 0.66), track = -0.025;
-      x.font = '300 100px Melodrama, serif';
+      var target = W * (W / H < 0.9 ? 0.9 : 0.66), track = opts.track === undefined ? -0.025 : opts.track;
+      var face = opts.font || '400 {s}px "Archivo Narrow", sans-serif';
+      x.font = face.replace('{s}', 100);
       var total = 0, adv = [];
       for (var i = 0; i < word.length; i++) { var w = x.measureText(word[i]).width + track * 100; adv.push(w); total += w; }
       var size = Math.min(target / total * 100, H * 0.3);
-      x.font = '300 ' + size + 'px Melodrama, serif';
+      x.font = face.replace('{s}', size);
       var scale = size / 100, px = (W - total * scale) / 2, base = wl * H, edges = [];
       x.fillStyle = '#fff'; x.textBaseline = 'alphabetic';
       for (i = 0; i < word.length; i++) { edges.push(px / W); x.fillText(word[i], px, base); px += adv[i] * scale; }
